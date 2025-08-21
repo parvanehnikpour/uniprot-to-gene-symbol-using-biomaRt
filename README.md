@@ -1,4 +1,4 @@
-# Converting-Protein-UniProt-Accession-Numbers-to-Gene-Symbols
+# uniprot-to-gene-symbol-using-biomaRt
 R script using biomaRt to convert protein UniProt accession numbers into gene symbols
 
 Sometimes we need to convert protein UniProt accession numbers into gene symbols. A reliable way to do this is by using the biomaRt R package. You can find full documentation here:
