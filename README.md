@@ -13,9 +13,7 @@ Here, I will guide you step-by-step how to accompolish this task in R:
 
   Setting and Verifying the Working Directory: By typing:
    
-  ```R getwd()```
-  
-  You will check current working directory.
+  ```R getwd()```      You will check current working directory.
   
   Then if you need to change it, use: 
   
