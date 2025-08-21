@@ -49,7 +49,7 @@ library(readxl)
 library(biomaRt)
 ```
 
-**Step 3: Load Your Data File**
+**Step 3: Load your data file**
 
 You can load either an Excel file or a CSV file depending on your dataset format. It is assumed that you have already copied your file into the current working directory set in the previous step.
 
