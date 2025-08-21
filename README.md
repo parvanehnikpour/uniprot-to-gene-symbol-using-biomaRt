@@ -11,8 +11,15 @@ In the KEA3 interface, under the section **"Input a list of proteins"**, the hel
 
 Here, I will guide you step-by-step how to accompolish this task in R:
 
-  - Setting and Verifying the Working Directory:
-  
+**Step 1: Set and verify your working directory**
+
+  - Check your current working directory:
+<pre> ```r getwd() ``` </pre>
+
+
+
+
+
     By typing: ```getwd()```, you will check your current working directory.
   
      Then if you need to change it, use: ```setwd(C:\\Users\\xnikpa\\biomaRt)```. Replace this path to what you want to have in your own PC.
