@@ -14,33 +14,61 @@ Here, I will guide you step-by-step how to accompolish this task in R:
 **Step 1: Set and verify your working directory**
 
   - Check your current working directory:
-
-    `getwd()`
+```r
+getwd()
+```
 
 - Change it (replace the path with your own). On Windows you can use forward slashes or double backslashes:
+```r
+setwd(C:\\Users\\xnikpa\\biomaRt)
 
-    `setwd(C:\\Users\\xnikpa\\biomaRt)`
+# or 
 
-    or 
-
-    `setwd("C:/Users/xnikpa/biomaRt")`
+setwd("C:/Users/xnikpa/biomaRt")
+```
 
 - Verify the change:
-  
-     `getwd()`
+```r
+getwd()
+```
 
-**Step 2: Install and Load Necessary Packages**
+**Step 2: Install and load necessary R packages**
 
 For this task, we need two R packages: readxl (to read Excel files) and biomaRt (to convert UniProt IDs to gene symbols).
 
 - Install packages (only once per computer):
-  
-    `install.packages("readxl")`
+```r
+install.packages("readxl")
+install.packages("biomaRt")
+```
 
-    `install.packages("biomaRt")`
 
 - Load packages (every time you start R):
-  
-    `library(readxl)`
-    
-    `library(biomaRt)`
+```r
+library(readxl)
+library(biomaRt)
+```
+
+**Step 3: Load Your Data File**
+
+You can load either an Excel file or a CSV file depending on your dataset format. It is assumed that you have already copied your file into the current working directory set in the previous step.
+
+- Loading an Excel file (.xlsx):
+
+```r
+# Load an Excel file (example)
+my_data <- read_excel("your_file.xlsx", sheet = "Sheet1")
+
+# View the data
+View(my_data)
+```
+
+- Loading a CSV file (.csv):
+
+```r
+# Load a csv file (example)
+my_data <- read.csv("your_file.csv")
+
+# View the data
+View(my_data)
+```
