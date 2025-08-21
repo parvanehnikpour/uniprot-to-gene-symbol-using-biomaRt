@@ -136,6 +136,8 @@ The data frame will have two columns:
 
 So, with these simple steps, we can convert UniProt protein IDs into HGNC gene symbols.
 
-For convenience, I have provided an example dataset in Excel (your_file.xlsx) along with ready-to-use R code to perform the conversion. You can download this file and run the code directly.
+# Important note
 
-I have also included the expected output file (converted_output.csv) so you can compare your results.
+For convenience, I have provided an example dataset in Excel **(your_file.xlsx)** along with ready-to-use R scripts **(uniprot-to-gene-symbol-using-biomaRt.R)** to perform the conversion. You can download these files and run the code directly. All these are in **data** folder in this repository.
+
+I have also included the expected output file there **(converted_output.csv)** so you can compare your results.
