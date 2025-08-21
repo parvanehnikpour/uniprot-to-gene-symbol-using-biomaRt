@@ -72,3 +72,64 @@ my_data <- read.csv("your_file.csv")
 # View the data
 View(my_data)
 ```
+
+**Step 4: Using biomaRt**
+
+- Connecting to Ensembl using biomaRt:
+
+```r
+#First Connect to Ensembl using biomaRt
+ensembl <- useMart("ensembl", dataset = "hsapiens_gene_ensembl")
+```
+
+- Get HGNC gene symbols for your proteins:
+
+```r
+converted_output <- getBM(
+  filters = "uniprotswissprot",
+  attributes = c("uniprotswissprot", "hgnc_symbol"),
+  values = unique(my_data$here you must write your column name),
+  mart = ensembl
+)
+```
+- Save outputs in csv format
+
+```r
+write.csv(converted_output, "converted_output.csv", row.names = FALSE)
+```
+
+**Step by step explanation of above codes:**
+
+`filters = "uniprotswissprot"`
+
+Tells biomaRt what kind of IDs you are providing. Here, you’re inputting UniProt IDs.
+
+`attributes = c("uniprotswissprot", "hgnc_symbol")`
+
+Specifies what you want returned from BioMart:
+
+- uniprotswissprot → the original UniProt ID.
+
+- hgnc_symbol → the corresponding gene symbol (HGNC-approved).
+
+`values = unique(my_data$<your_column_name>)`
+
+Provides the actual list of IDs to convert.
+
+my_data is your data frame, and <your_column_name> should be replaced with the column containing UniProt IDs.
+
+unique() ensures no duplicates are queried, which speeds up the request.
+
+`mart = ensembl`
+
+Specifies the BioMart database to use (usually useMart("ensembl", ...) assigned to ensembl).
+
+`converted_output <- ...`
+
+Saves the result as a data frame called converted_output.
+
+The data frame will have two columns:
+
+- uniprotswissprot → your input IDs
+
+- hgnc_symbol → converted gene symbols
