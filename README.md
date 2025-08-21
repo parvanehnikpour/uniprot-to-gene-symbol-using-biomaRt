@@ -133,3 +133,5 @@ The data frame will have two columns:
 - uniprotswissprot → your input IDs
 
 - hgnc_symbol → converted gene symbols
+
+So, with these simple steps, we can convert our protein Uniprot IDs to HGNC gene symbols.
