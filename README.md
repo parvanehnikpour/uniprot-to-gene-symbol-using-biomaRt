@@ -14,14 +14,17 @@ Here, I will guide you step-by-step how to accompolish this task in R:
 **Step 1: Set and verify your working directory**
 
   - Check your current working directory:
-<pre> ```r getwd() ``` </pre>
 
+    `getwd()`
 
+- Change it (replace the path with your own). On Windows you can use forward slashes or double backslashes:
 
+    `setwd(C:\\Users\\xnikpa\\biomaRt)`
 
+    or 
 
-    By typing: ```getwd()```, you will check your current working directory.
+    `setwd("C:/Users/xnikpa/biomaRt")`
+
+- Verify the change:
   
-     Then if you need to change it, use: ```setwd(C:\\Users\\xnikpa\\biomaRt)```. Replace this path to what you want to have in your own PC.
-
-     To re-check that path, you can again use this code: ```getwd()```
+     `getwd()`
