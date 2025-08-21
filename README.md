@@ -28,3 +28,19 @@ Here, I will guide you step-by-step how to accompolish this task in R:
 - Verify the change:
   
      `getwd()`
+
+**Step 2: Install and Load Necessary Packages**
+
+For this task, we need two R packages: readxl (to read Excel files) and biomaRt (to convert UniProt IDs to gene symbols).
+
+- Install packages (only once per computer):
+  
+    `install.packages("readxl")`
+
+    `install.packages("biomaRt")`
+
+- Load packages (every time you start R):
+  
+    `library(readxl)`
+    
+    `library(biomaRt)`
